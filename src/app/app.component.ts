@@ -11,5 +11,8 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  funcaoClique() {
+    alert('Button clicked!');
+  }
   title = 'bucketlist-app';
 }
