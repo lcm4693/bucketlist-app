@@ -1,4 +1,4 @@
-<h1 class="text-2xl font-bold underline">Hello world!</h1>
+<!-- <h1 class="text-2xl font-bold underline">Hello world!</h1>
 
 <button
   pButton
@@ -6,5 +6,19 @@
   label="Clique aqui"
   class="mt-10"
   (click)="funcaoClique()"
-></button>
+></button> -->
+<app-header />
+
+<amplify-authenticator>
+  <ng-template
+    amplifySlot="authenticated"
+    let-user="user"
+    let-signOut="signOut"
+  >
+    <h1>Welcome {{ user.username }}!</h1>
+    <button (click)="signOut()">Sign Out</button>
+  </ng-template>
+</amplify-authenticator>
+
 <router-outlet />
+<app-footer />
